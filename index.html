@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Generate ThunderCore mobile deeplinks on the fly">
+    <meta name="author" content="Bruno Barbieri">
+
+    <title>ThunderCore deep link generator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">
+    <script src='js/bundle.js'></script>
+    <style>
+        #url {
+            margin-top: 20px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .field {
+            padding: 10px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: 1px solid #CACACA;
+        }
+
+        .short-field {
+            flex: 1;
+            display: flex;
+        }
+
+        .short-field:first-child {
+            margin-right: 15px;
+        }
+
+        .long-field {
+            width: 100%;
+        }
+
+        .center {
+            width: 150px;
+            margin: auto;
+            display: block;
+        }
+
+        .param-row {
+            display: flex;
+        }
+
+        #dapp-form,
+        #payment-request-form,
+        #reset,
+        #payment-request {
+            display: none;
+        }
+
+        .field {
+            padding: 10px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: 1px solid #CACACA;
+        }
+
+        .short-field {
+            flex: 1;
+            display: flex;
+        }
+
+        .short-field:first-child {
+            margin-right: 15px;
+        }
+
+        .long-field {
+            width: 100%;
+        }
+
+        .center {
+            width: 150px;
+            margin: auto;
+            display: block;
+        }
+
+        .param-row {
+            display: flex;
+        }
+
+        #payment-request {
+            margin-bottom: 30px;
+        }
+
+        #form,
+        #payment-channel-request-form,
+        #reset {
+            display: none;
+        }
+
+        .field {
+            padding: 10px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: 1px solid #CACACA;
+        }
+
+        .short-field {
+            flex: 1;
+            display: flex;
+        }
+
+        .short-field:first-child {
+            margin-right: 15px;
+        }
+
+        .long-field {
+            width: 100%;
+        }
+
+        .center {
+            width: 150px;
+            margin: auto;
+            display: block;
+        }
+
+        .param-row {
+            display: flex;
+        }
+
+        #form,
+        #reset {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">ThunderCore deep link generator</h1>
+                <p class="lead text-muted">Generate ThunderCore mobile deeplinks on the fly!</p>
+                <br />
+                <br />
+
+
+
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div id='dapp-form' style="display: block;">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center">
+                            <p>
+                                Enter your dApp url:
+                            </p>
+                            <p>
+                                <input autocapitalize="off" class="field long-field" type='text' name='dapp_url'
+                                    id='dapp_url' placeholder='For ex. https://mining.thundercore.com/' />
+                            </p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <hr />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>
+                                <a href="javascript:void(0)" class="btn btn-success"
+                                    onclick="generateDappUrl()">Generate URL</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a id='url'></a>
+                    <p id='qr-wrapper'></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+</body>
+
+</html>
